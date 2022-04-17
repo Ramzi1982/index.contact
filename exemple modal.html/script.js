@@ -1,5 +1,5 @@
 function sendEmail(){
-
+    
     var name = document.getElementById("name").value;
     var sujet = document.getElementById("sujet").value;
     var mail = document.getElementById("email").value;
@@ -19,14 +19,19 @@ function sendEmail(){
                     + "<br> phone:" + document.getElementById("phone").value
                     + "<br> sujet:" + document.getElementById("sujet").value
                     + "<br> message:"+ document.getElementById("message").value
-            }).then(
-              
-            )
-    
-                    
+            }).then(res=>{
+              name = "";
+              mail = "";
+              sujet = ""
+              document.getElementById("email").value = "";
+              document.getElementById("message").value = ""
+              }).cache(error=>{
+                  const errorMsg = document.getElementById("submitErrorMessage");
+                   errorMsg.classList.remove("d-none");
+              })
         }else{
-         
-         
+             const errorMsg = document.getElementById("submitErrorMessage");
+            errorMsg.classList.remove("d-none");
         }
     }
     
@@ -51,6 +56,8 @@ function sendEmail(){
     //function to open modal
     function openModal(){
         modal.style.display ='block';
+        const errorMsg = document.getElementById("submitErrorMessage");
+        if (!errorMsg.classList.contains("d-none")) { errorMsg.classList.add("d-none");}
     }
     
     //function to close modal
