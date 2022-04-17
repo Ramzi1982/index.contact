@@ -1,0 +1,93 @@
+<!-- Contact-->
+<section class="page-section" id="contact">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Contactez-nous </h2>
+            <h3 class="section-subheading text-muted1">Laissez-nous un message…</h3>
+        </div>
+        <!-- * * * * * * * * * * * * * * *-->
+        <!-- * * SB Forms Contact Form * *-->
+        <!-- * * * * * * * * * * * * * * *-->
+        <!-- This form is pre-integrated with SB Forms.-->
+        <!-- To make this form functional, sign up at-->
+        <!-- https://startbootstrap.com/solution/contact-forms-->
+        <!-- to get an API token!-->
+        <form  onsubmit="sendEmail() ;reset(); " class="contact-form" id="contactForm" data-sb-form-api-token="API_TOKEN">
+            <div class="row align-items-stretch mb-5">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <!-- Name input-->
+                        <input class="form-control" id="name" type="text" placeholder="Votre Nom *" data-sb-validations="required" />
+                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                    </div>
+                    <div class="form-group">
+                        <!-- Email address input-->
+                        <input class="form-control" id="email" type="email" placeholder="Votre Email *" data-sb-validations="required,email" />
+                        <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                        <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                    </div>
+                    <div class="form-group mb-md-0">
+                        <!-- Phone number input-->
+                        <input class="form-control" id="phone" type="tel" placeholder="Votre Télephone *" data-sb-validations="required" />
+                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                    </div>
+                </div>
+                
+                
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <!-- Name input-->
+                        <input class="form-control" id="sujet" type="text" placeholder="Votre Sujet *" data-sb-validations="required" />
+                        <div class="invalid-feedback" data-sb-feedback="name:required">A subject is required.</div>
+                    </div>
+                    <div class="form-group form-group-textarea mb-md-0">
+                        <!-- Message input-->
+                        <textarea class="form-control" id="message" placeholder="Votre Message *" data-sb-validations="required"></textarea>
+                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit success message-->
+            <!---->
+            <!-- This is what your users will see when the form-->
+            <!-- has successfully submitted-->
+            
+            <!-- Submit error message-->
+            <!---->
+            <!-- This is what your users will see when there is-->
+            <!-- an error submitting the form-->
+            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+            <!-- Submit Button-->
+            <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase unabled" id="submitButton" type="submit">Envoyer Message</button>
+                <div id="reponseModal" class="modal-succes">
+                    <div class="modal-content-succes">
+                        <div class="modal-header1">
+                            <span class="closeBtn">&times;</span>
+                            <h2>Next Web Plus Agency</h2>
+                        </div>
+                        <div>
+                            <p>Votre Message a bien été Envoyé! </p>
+                            <p>Merci d’avoir pris le temps de nous contacter via notre formulaire.
+
+                                Votre message a bien été transmis à nos équipes, nous vous répondrons dans les plus brefs délais.</p>
+                        </div>
+                        
+                        <div class="modal-footer1">
+                            <h3> Merci Pour Votre Message </h3>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+
+
+
+            
+           
+
+            
+
+        </form>
+    </div>
+</section>
